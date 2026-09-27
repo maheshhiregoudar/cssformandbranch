@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+        stages{
+            stage("GIT Checkout"){
+                steps{
+                    git url: 'https://github.com/maheshhiregoudar/cssformandbranch.git', branch:'jenkins'
+            }
+        }
+    }
+}
