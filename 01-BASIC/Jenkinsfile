@@ -1,0 +1,11 @@
+pipeline{
+    stage any
+        stages{
+            stage("First Build")
+                steps{
+                    sh'''
+                    echo "building new"
+                    '''
+                }
+        }
+}
