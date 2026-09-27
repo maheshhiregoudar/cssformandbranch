@@ -1,7 +1,7 @@
 pipeline{
     agent any
-    Parameters{
-        string(Name:'ENV',defaultValue:'Prod',description:'This is to test')
+    parameters{
+        string(name:'ENV',defaultValue:'Prod',description:'This is to test')
     }      
     stages{
         stage('build stage'){
