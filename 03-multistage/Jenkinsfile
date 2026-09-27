@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    Parameters{
+        string(Name:'ENV',defaultValue:'Prod',description:'This is to test')
+    }      
+    stages{
+        stage('build stage'){
+            steps{
+                sh'''
+                    echo "Hello Jenkins"
+                    echo " This is a test pipeline"
+                    echo "ENV is $ENV"
+                '''
+                }
+               }
+    }
+}
