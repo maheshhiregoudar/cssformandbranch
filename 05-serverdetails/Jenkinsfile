@@ -5,7 +5,7 @@ pipeline{
     stages{
         stage('Ip Address'){
             steps{
-                sh 'Hostname -I'
+                sh 'hostname -I'
                 }
             }
         stage('disk usage'){
@@ -20,7 +20,7 @@ pipeline{
         }
         stage('CPU usage'){
             steps{
-                sh 'top -bn1 | head 20'
+                sh 'top -bn1 | head -20'
             }
         }
     }
