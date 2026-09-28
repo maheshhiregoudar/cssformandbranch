@@ -1,0 +1,27 @@
+pipeline{
+    agent{
+        label 'Slave'
+    }
+    stages{
+        stage('Ip Address'){
+            steps{
+                sh 'Hostname -I'
+                }
+            }
+        stage('disk usage'){
+            steps{
+                sh 'df -kh'
+            }
+        }
+        stage('memory'){
+            steps{
+                sh 'free -h'
+            }
+        }
+        stage('CPU usage'){
+            steps{
+                sh 'top -bn1 | head 20'
+            }
+        }
+    }
+}
